@@ -129,7 +129,7 @@ main()
 
     if [ $plugin = "git" ]; then
       IFS=' ' read -r -a colors  <<< $(get_tmux_option "@dracula-git-colors" "green dark_gray")
-        script="#($current_dir/git.sh)"     
+        script="#($current_dir/git.sh)"
     fi
 
     if [ $plugin = "battery" ]; then
@@ -188,7 +188,7 @@ main()
       elif $show_day_month; then # only dd/mm
         script="%a %d/%m %I:%M %p ${timezone} "
       else
-        script="%a %m/%d %I:%M %p ${timezone} "
+        script="%a %Y-%m-%d %I:%M %p ${timezone} "
       fi
     fi
 
